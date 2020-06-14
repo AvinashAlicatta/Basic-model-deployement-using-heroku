@@ -8,4 +8,6 @@ Pre-Processing.py: its the code used for cleaning and cleansing the textual data
 
 model.py: its the code used for building the model and to to create the .pkl files.
 
+application link: https://demohamspam.herokuapp.com/
+
 NOTE: even though the model accuracy is around 90%, as it is trained on a limited data set sometimes the output maybe not accurate.
