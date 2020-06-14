@@ -1,4 +1,4 @@
-# NLP-Model-Deployment
+# Model-Deployment-on-Heroku
 
 Objective: to deploy a basic application on heroku platform.
 
