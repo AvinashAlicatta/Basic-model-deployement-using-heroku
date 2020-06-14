@@ -7,8 +7,6 @@ from sklearn.naive_bayes import MultinomialNB
 import pickle
 import joblib
 
-
-# load the model from disk
 filename = 'model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 cv=pickle.load(open('tranform.pkl','rb'))
