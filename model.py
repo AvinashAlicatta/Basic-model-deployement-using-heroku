@@ -1,11 +1,18 @@
-df= pd.read_csv("spam.csv", encoding="latin-1")
-df.drop(['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4'], axis=1, inplace=True)
+from flask import Flask,render_template,url_for,request
+import pandas as pd 
+import pickle
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.externals import joblib
+import pickle
+df= pd.read_csv("emails3.csv", encoding="latin-1")
+df=df.drop(['Column1'],axis=1)
 
-df['label'] = df['class'].map({'ham': 0, 'spam': 1})
+df['label'] = df['class'].map({'Abusive': 0, 'Non Abusive': 1})
 X = df['message']
 y = df['label']
 
-#	# Extract Feature With CountVectorizer
+# Extract Feature With CountVectorizer
 cv = CountVectorizer()
 X = cv.fit_transform(X) 
 
